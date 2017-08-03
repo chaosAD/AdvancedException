@@ -14,7 +14,17 @@ typedef struct {
   TokenType type;
   uint32_t startColumn;
   uint32_t length;
+  char *originalStr;
   char *str;
 } Token;
+
+typedef struct {
+  TokenType type;
+  uint32_t startColumn;
+  uint32_t length;
+  char *originalStr;
+  char *str;
+  Token *token[0];
+} OperatorToken;
 
 #endif // _TOKEN_H
