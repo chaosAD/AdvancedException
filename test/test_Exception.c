@@ -25,11 +25,11 @@ void dumpErrorMessage(CEXCEPTION_T ex, int lineNo) {
 
 void test_throwException(void) {
   CEXCEPTION_T ex = NULL;
-  char *str = "movwf  0x3 ###########";
+  char *str = "movwf  0x3   ###########";
 
   OperatorToken token = {
     .type = TOKEN_OPERATOR_TYPE,
-    .startColumn = 11,
+    .startColumn = 13,
     .length = 11,
     .originalStr = str,
     .str = "###########",
